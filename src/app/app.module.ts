@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthComponent } from './auth/auth.component';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireAuthGuardModule } from '@angular/fire/compat/auth-guard';
+import { BaseUrlPipe } from './pipe/base-url.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AngularFireAuthGuardModule } from '@angular/fire/compat/auth-guard';
     BookmarkListComponent,
     BookmarkFormComponent,
     AuthComponent,
+    BaseUrlPipe,
   ],
   imports: [
     BrowserModule,

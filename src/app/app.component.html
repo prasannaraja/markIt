@@ -9,15 +9,14 @@
     </div>
   </div>
 </nav>
-<router-outlet>
-  <!-- <app-auth></app-auth> -->
-  <div *ngIf="afAuth.authState | async as user; else showLogin">
-    <app-bookmark-form></app-bookmark-form>
-    <app-bookmark-list></app-bookmark-list>
-  </div>
-  <div>
-    <ng-template #showLogin>
-      <p>Please log in to manage your bookmarks.</p>
-    </ng-template>
-  </div>
-</router-outlet>
+
+<div *ngIf="afAuth.authState | async as user; else showLogin">
+  <app-bookmark-form></app-bookmark-form>
+  <app-bookmark-list></app-bookmark-list>
+</div>
+<div>
+  <ng-template #showLogin>
+    <app-auth></app-auth>
+  </ng-template>
+  <!-- <router-outlet></router-outlet> -->
+</div>

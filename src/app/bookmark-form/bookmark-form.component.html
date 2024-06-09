@@ -1,18 +1,21 @@
-<form (ngSubmit)="addBookmark()">
-  <input
-    type="text"
-    [(ngModel)]="title"
-    name="title"
-    placeholder="Title"
-    required
-  />
-  <input type="url" [(ngModel)]="url" name="url" placeholder="URL" required />
-  <input
-    type="text"
-    [(ngModel)]="tags"
-    name="tags"
-    placeholder="Tags (comma separated)"
-    required
-  />
-  <button type="submit">Add Bookmark</button>
-</form>
+<div class="add-bookmark-0">
+  <h2>Add Bookmark</h2>
+  <form (ngSubmit)="addBookmark()">
+    <input
+      type="text"
+      [(ngModel)]="title"
+      name="title"
+      placeholder="Title"
+      required
+    />
+    <input type="url" [(ngModel)]="url" name="url" placeholder="URL" required />
+    <input
+      type="text"
+      [(ngModel)]="tags"
+      name="tags"
+      placeholder="Tags (comma separated)"
+      required
+    />
+    <button type="submit">Add Bookmark</button>
+  </form>
+</div>

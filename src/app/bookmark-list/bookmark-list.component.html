@@ -1,8 +1,11 @@
-<div *ngFor="let bookmark of bookmarks$ | async" class="bookmark-tile">
-  <h3>{{ bookmark.title }}</h3>
-  <p>
-    <a [href]="bookmark.url" target="_blank">{{ bookmark.url }}</a>
-  </p>
-  <p>Tags: {{ bookmark.tags.join(", ") }}</p>
-  <button (click)="deleteBookmark(bookmark.key)">Delete</button>
+<div class="bookmark-list-0">
+  <h2>Bookmarks</h2>
+  <div *ngFor="let bookmark of bookmarks$ | async" class="bookmark-tile">
+    <h3>{{ bookmark.title }}</h3>
+    <p>
+      <a [href]="bookmark.url" target="_blank">{{ bookmark.url | baseUrl }}</a>
+    </p>
+    <p>Tags: {{ bookmark.tags.join(", ") }}</p>
+    <button (click)="deleteBookmark(bookmark.key)">Delete</button>
+  </div>
 </div>

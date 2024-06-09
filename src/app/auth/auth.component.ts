@@ -18,7 +18,6 @@ export class AuthComponent {
   }
 
   login() {
-    debugger;
     this.afAuth
       .signInWithEmailAndPassword(this.email, this.password)
       .then((user) => {
