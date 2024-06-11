@@ -12,8 +12,8 @@ export class AuthComponent {
   IsNotLoggedIn: boolean;
 
   constructor(private afAuth: AngularFireAuth) {
-    this.email = 'prasannaraja@msn.com';
-    this.password = 'Welc0me$$';
+    this.email = '';
+    this.password = '';
     this.IsNotLoggedIn = true;
   }
 
